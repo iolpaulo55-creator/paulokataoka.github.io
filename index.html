@@ -13,7 +13,6 @@ body {
   color: #fff;
 }
 
-/* HERO */
 .hero {
   text-align: center;
   padding: 50px 20px;
@@ -33,7 +32,6 @@ h1 {
   color: #cbd5f5;
 }
 
-/* BOTÃO */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -45,7 +43,6 @@ h1 {
   font-weight: bold;
 }
 
-/* PLANOS */
 .section {
   padding: 20px;
 }
@@ -69,30 +66,29 @@ h1 {
 
 .price {
   color: #22c55e;
+  margin-top: 8px;
 }
 
-/* DETALHES */
 .details {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.5s ease;
   font-size: 14px;
   color: #cbd5f5;
   margin-top: 10px;
+  line-height: 1.5;
 }
 
 .plan.active .details {
-  max-height: 200px;
+  max-height: 600px;
 }
 
-/* TEXTO TOGGLE */
 .toggle {
   margin-top: 10px;
   color: #22c55e;
   font-size: 14px;
 }
 
-/* WHATS */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -112,10 +108,7 @@ h1 {
 <div class="hero">
   <img src="sua-foto.jpg">
 
-  <h1>
-    Proteja seu veículo sem burocracia<br>
-    pagando menos
-  </h1>
+  <h1>Proteja seu veículo sem burocracia</h1>
 
   <div class="sub">
     Consultor credenciado Auto Vale Prevenções
@@ -128,49 +121,90 @@ h1 {
 
 <div class="section">
 
-  <!-- BÁSICO -->
-  <div class="plan" onclick="togglePlan(this)">
-    <h3>Básico</h3>
-    <p>Proteção essencial</p>
-    <div class="price">Carro R$ 94,90 | Moto R$ 50,90</div>
-    <div class="toggle">Ver detalhes</div>
+<!-- BÁSICO -->
+<div class="plan" onclick="togglePlan(this)">
+  <h3>Básico</h3>
+  <p>Proteção essencial</p>
+  <div class="price">Carro a partir de R$ 94,90 | Moto a partir de R$ 50,90</div>
+  <div class="toggle">Ver detalhes</div>
 
-    <div class="details">
-      ✔ Roubo e furto<br>
-      ✔ Perda total<br>
-      ✔ Assistência 24h
-    </div>
+  <div class="details">
+✔ Roubo e Furto<br>
+✔ Perda Total<br>
+✔ Colisão<br>
+✔ Incêndio<br>
+✔ Fenômenos Naturais<br>
+✔ Cobertura Nacional<br>
+✔ Guincho ilimitado (colisão)<br>
+✔ Guincho pane elétrica/mecânica até 250 km<br>
+✔ SOS Pneus<br>
+✔ Auxílio chaveiro<br>
+✔ Retorno ao domicílio<br>
+✔ Hospedagem emergencial
   </div>
+</div>
 
-  <!-- VIP -->
-  <div class="plan vip" onclick="togglePlan(this)">
-    <h3>VIP (mais escolhido)</h3>
-    <p>Melhor custo-benefício</p>
-    <div class="price">Carro R$ 114,90 | Moto R$ 58,90</div>
-    <div class="toggle">Ver detalhes</div>
+<!-- VIP -->
+<div class="plan vip" onclick="togglePlan(this)">
+  <h3>VIP</h3>
+  <p>Mais benefícios e tranquilidade</p>
+  <div class="price">Carro a partir de R$ 114,90 | Moto a partir de R$ 58,90</div>
+  <div class="toggle">Ver detalhes</div>
 
-    <div class="details">
-      ✔ Tudo do básico<br>
-      ✔ Cobertura ampliada<br>
-      ✔ Guincho maior
-    </div>
+  <div class="details">
+✔ Roubo e Furto<br>
+✔ Perda Total<br>
+✔ Colisão<br>
+✔ Incêndio<br>
+✔ Fenômenos Naturais<br>
+✔ Cobertura Nacional<br>
+✔ Guincho ilimitado (colisão)<br>
+✔ Guincho pane elétrica/mecânica até 500 km<br>
+✔ SOS Pneus<br>
+✔ Auxílio chaveiro<br>
+✔ Retorno ao domicílio<br>
+✔ Hospedagem emergencial<br>
+✔ Peças isoladas<br>
+✔ Cobertura de vidros 50% desconto<br>
+✔ Cobertura de terceiros:<br>
+→ Veículos até R$ 50 mil<br>
+→ Danos até R$ 10 mil
   </div>
+</div>
 
-  <!-- TOP -->
-  <div class="plan" onclick="togglePlan(this)">
-    <h3>TOP</h3>
-    <p>Proteção completa</p>
-    <div class="price">Carro R$ 160,90 | Moto R$ 69,90</div>
-    <div class="toggle">Ver detalhes</div>
+<!-- TOP -->
+<div class="plan" onclick="togglePlan(this)">
+  <h3>TOP</h3>
+  <p>Proteção completa</p>
+  <div class="price">Carro a partir de R$ 160,90 | Moto a partir de R$ 69,90</div>
+  <div class="toggle">Ver detalhes</div>
 
-    <div class="details">
-      ✔ Tudo do VIP<br>
-      ✔ Terceiros<br>
-      ✔ Veículo reserva
-    </div>
+  <div class="details">
+✔ Roubo e Furto<br>
+✔ Perda Total<br>
+✔ Colisão<br>
+✔ Incêndio<br>
+✔ Fenômenos Naturais<br>
+✔ Cobertura Nacional<br>
+✔ Guincho ilimitado (colisão)<br>
+✔ Guincho pane elétrica/mecânica até 1000 km<br>
+✔ SOS Pneus<br>
+✔ Auxílio chaveiro<br>
+✔ Retorno ao domicílio<br>
+✔ Hospedagem emergencial<br>
+✔ Peças isoladas 70% desconto<br>
+✔ Cobertura de terceiros:<br>
+→ Carro até R$ 100 mil<br>
+→ Moto até R$ 10 mil<br>
+✔ Veículo reserva até 30 dias
   </div>
+</div>
 
 </div>
+
+<p style="text-align:center; font-size:12px; color:#94a3b8;">
+Valores podem variar conforme o veículo e perfil
+</p>
 
 <a class="whatsapp" href="https://wa.me/557597142719">💬</a>
 
