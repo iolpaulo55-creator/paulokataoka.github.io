@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,33 +9,54 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #020617, #0f172a);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0b0f1a;
   color: #fff;
 }
 
-/* CONTAINER */
-.container {
-  text-align: center;
-  padding: 20px;
+/* NAV */
+.nav {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b0f1a;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-/* FOTO */
-.hero-img img {
-  width: 130px;
+.brand {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile img {
+  width: 40px;
   border-radius: 50%;
-  border: 3px solid #22c55e;
+  border: 2px solid #22c55e;
+}
+
+/* HERO */
+.hero {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero img {
+  width: 120px;
+  border-radius: 50%;
   box-shadow: 0 0 20px #22c55e;
 }
 
-/* TEXTO */
 h1 {
-  font-size: 26px;
-  margin-top: 15px;
+  font-size: 28px;
+  margin-top: 20px;
+  line-height: 1.3;
 }
 
-p {
-  font-size: 16px;
+.sub {
+  margin-top: 10px;
+  color: #9ca3af;
+  font-size: 15px;
 }
 
 .highlight {
@@ -45,76 +67,84 @@ p {
 /* BOTÃO */
 .btn {
   display: inline-block;
-  background: linear-gradient(45deg, #22c55e, #16a34a);
-  padding: 16px 28px;
-  border-radius: 12px;
-  color: white;
-  text-decoration: none;
   margin-top: 20px;
-  font-size: 18px;
-  transition: 0.3s;
+  padding: 16px 28px;
+  background: #22c55e;
+  color: #000;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-.btn:hover {
-  transform: scale(1.05);
+/* TIMER */
+.timer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #22c55e;
 }
 
 /* PLANOS */
-.plans {
-  margin-top: 40px;
+.section {
+  padding: 30px 20px;
 }
 
-.plan {
-  background: rgba(255,255,255,0.05);
+.section h2 {
+  margin-bottom: 15px;
+}
+
+.card {
+  background: #111827;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 15px;
 }
 
-.plan.vip {
+.card.vip {
   border: 2px solid #22c55e;
-  box-shadow: 0 0 15px rgba(34,197,94,0.4);
 }
 
 .badge {
-  background: #22c55e;
-  padding: 5px 10px;
-  border-radius: 8px;
   font-size: 12px;
+  background: #22c55e;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 6px;
   display: inline-block;
   margin-bottom: 10px;
 }
 
 .price {
-  font-size: 20px;
   color: #22c55e;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 /* CONFIANÇA */
 .trust {
-  margin-top: 30px;
+  padding: 20px;
   font-size: 14px;
-  opacity: 0.9;
+  color: #9ca3af;
 }
 
-/* TIMER */
-.timer {
-  font-size: 18px;
-  margin-top: 15px;
-  color: #22c55e;
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: #6b7280;
 }
 
-/* WHATS */
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #22c55e;
-  padding: 15px;
+  padding: 14px;
   border-radius: 50%;
-  color: white;
-  font-size: 22px;
+  color: #000;
+  font-size: 20px;
   text-decoration: none;
 }
 </style>
@@ -122,68 +152,76 @@ p {
 
 <body>
 
-<div class="container">
+<div class="nav">
+  <div class="brand">Auto Vale Proteções</div>
+  <div class="profile">
+    <img src="sua-foto.jpg">
+  </div>
+</div>
 
-<div class="hero-img">
+<div class="hero">
   <img src="sua-foto.jpg">
+
+  <h1>
+    Evite prejuízo com roubo ou colisão<br>
+    <span class="highlight">proteja seu veículo pagando menos</span>
+  </h1>
+
+  <div class="sub">
+    Consultor credenciado • Atendimento direto e rápido no WhatsApp
+  </div>
+
+  <a class="btn" href="https://wa.me/557597142719?text=Quero%20fazer%20uma%20simulação">
+    Fazer simulação grátis
+  </a>
+
+  <div class="timer">
+    ⏳ 10% de desconto na adesão termina em <span id="timer"></span>
+  </div>
 </div>
 
-<h1>Proteja seu carro ou moto <span class="highlight">pagando menos e sem burocracia</span> 🚗</h1>
+<div class="section">
+  <h2>Planos disponíveis</h2>
 
-<p>
-Sou <span class="highlight">consultor credenciado Auto Vale Prevenções</span><br>
-Atendimento direto comigo, sem enrolação e com resposta rápida.
-</p>
+  <div class="card">
+    <h3>Básico</h3>
+    <p>Ideal pra quem quer economizar</p>
+    <div class="price">Carro a partir de R$ 94,90 | Moto R$ 50,90</div>
+  </div>
 
-<a class="btn" href="https://wa.me/557597142719?text=Quero%20fazer%20uma%20simulação%20gratuita">
-👉 Fazer simulação grátis no WhatsApp
-</a>
+  <div class="card vip">
+    <div class="badge">MAIS ESCOLHIDO</div>
+    <h3>VIP</h3>
+    <p>Melhor equilíbrio entre preço e proteção</p>
+    <div class="price">Carro a partir de R$ 114,90 | Moto R$ 58,90</div>
+  </div>
 
-<div class="timer">
-⏳ 10% de desconto na adesão termina em: <span id="timer"></span>
+  <div class="card">
+    <h3>TOP</h3>
+    <p>Proteção completa sem dor de cabeça</p>
+    <div class="price">Carro a partir de R$ 160,90 | Moto R$ 69,90</div>
+  </div>
 </div>
 
-<!-- PLANOS -->
-<div class="plans">
-
-<div class="plan">
-<h2>Básico</h2>
-<p>Ideal pra quem quer economizar e ter proteção essencial</p>
-<div class="price">Carro a partir de R$ 94,90 | Moto R$ 50,90</div>
-</div>
-
-<div class="plan vip">
-<div class="badge">MAIS ESCOLHIDO</div>
-<h2>VIP</h2>
-<p>Melhor custo-benefício com mais benefícios e cobertura</p>
-<div class="price">Carro a partir de R$ 114,90 | Moto R$ 58,90</div>
-</div>
-
-<div class="plan">
-<h2>TOP</h2>
-<p>Proteção completa pra quem quer rodar tranquilo</p>
-<div class="price">Carro a partir de R$ 160,90 | Moto R$ 69,90</div>
-</div>
-
-</div>
-
-<!-- CONFIANÇA -->
 <div class="trust">
 ✔ Atendimento direto comigo <br>
 ✔ Sem burocracia <br>
 ✔ Resposta rápida no WhatsApp
 </div>
 
-<a class="btn" href="https://wa.me/557597142719?text=Quero%20minha%20cotação">
-Quero minha cotação agora
-</a>
+<div class="section" style="text-align:center;">
+  <a class="btn" href="https://wa.me/557597142719?text=Quero%20minha%20cotação">
+    Falar com consultor agora
+  </a>
+</div>
 
+<div class="footer">
+Auto Vale Proteções • Consultoria especializada
 </div>
 
 <a class="whatsapp" href="https://wa.me/557597142719">💬</a>
 
 <script>
-// TIMER 10 MIN
 let time = 600;
 setInterval(() => {
   let min = Math.floor(time / 60);
