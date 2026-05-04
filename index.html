@@ -9,37 +9,41 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: linear-gradient(135deg, #020617, #0f172a);
   color: #fff;
 }
 
-/* TOPO */
+/* ANIMAÇÃO */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
+  padding: 15px;
   align-items: center;
-  padding: 15px 20px;
 }
 
 .logo {
   height: 45px;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-}
-
 .profile img {
   width: 45px;
-  height: 45px;
   border-radius: 50%;
   border: 2px solid #22c55e;
 }
 
-/* CONTEÚDO */
+/* HERO */
 .container {
   text-align: center;
   padding: 20px;
@@ -47,133 +51,142 @@ body {
 
 .hero-img img {
   width: 140px;
-  height: 140px;
   border-radius: 50%;
-  border: 3px solid #22c55e;
-  box-shadow: 0 0 25px rgba(34,197,94,0.5);
-  margin-top: 20px;
+  box-shadow: 0 0 30px #22c55e;
 }
 
 h1 {
   font-size: 28px;
-  margin-top: 20px;
-}
-
-p {
-  font-size: 17px;
-  margin: 15px 0;
 }
 
 .highlight {
   color: #22c55e;
-  font-weight: bold;
 }
 
 /* BOTÃO */
 .btn {
-  display: inline-block;
   background: linear-gradient(45deg, #22c55e, #16a34a);
-  color: white;
   padding: 16px 28px;
   border-radius: 12px;
+  color: white;
   text-decoration: none;
-  font-size: 18px;
+  display: inline-block;
   margin-top: 20px;
-  box-shadow: 0 4px 20px rgba(34,197,94,0.3);
   transition: 0.3s;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* SEÇÕES */
+/* CARDS */
 .section {
   margin-top: 40px;
-}
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .card {
   background: rgba(255,255,255,0.05);
   padding: 15px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
+  margin: 10px;
+  border-radius: 10px;
 }
 
-/* RODAPÉ */
-.footer {
-  margin-top: 50px;
-  font-size: 14px;
-  opacity: 0.7;
+/* CONTADOR */
+.counter {
+  font-size: 30px;
+  color: #22c55e;
+}
+
+/* WHATSAPP FIXO */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #22c55e;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOPO -->
 <div class="header">
   <img src="logo.jpg" class="logo">
-  
   <div class="profile">
     <img src="sua-foto.jpg">
-    <span>Consultor</span>
   </div>
 </div>
 
 <div class="container">
 
-<!-- FOTO DESTAQUE -->
-<div class="hero-img">
+<div class="hero-img fade-in">
   <img src="sua-foto.jpg">
 </div>
 
-<h1>Proteja seu veículo com <span class="highlight">segurança e economia</span> 🚗</h1>
+<h1 class="fade-in">Proteja seu veículo com <span class="highlight">segurança e economia</span> 🚗</h1>
 
-<p>Sem burocracia, sem consulta ao SPC/Serasa e com assistência 24h.</p>
+<p class="fade-in">Sem burocracia e com assistência 24h</p>
 
-<a class="btn" href="https://wa.me/557597142719?text=Olá,%20quero%20fazer%20uma%20simulação%20de%20proteção%20veicular">
-👉 Fazer simulação agora
+<a class="btn fade-in" href="https://wa.me/557597142719?text=Quero%20simular">
+Simular agora
 </a>
 
-<!-- VANTAGENS -->
-<div class="section">
-<h2>Por que escolher a Auto Vale?</h2>
-
-<div class="cards">
-  <div class="card">✔ Sem análise de perfil</div>
-  <div class="card">✔ Cobertura contra roubo e furto</div>
-  <div class="card">✔ Assistência 24h em todo Brasil</div>
-  <div class="card">✔ Planos acessíveis</div>
-</div>
+<div class="section fade-in">
+<h2>Clientes protegidos</h2>
+<div class="counter" id="counter">0</div>
 </div>
 
-<!-- CONVERSÃO -->
-<div class="section">
-<h2>Atendimento rápido</h2>
-
-<p>Fale direto comigo e receba sua cotação em minutos.</p>
-
-<a class="btn" href="https://wa.me/557597142719?text=Olá,%20vim%20pelo%20site%20e%20quero%20uma%20cotação">
-Quero minha cotação
-</a>
+<div class="section fade-in">
+<h2>Vantagens</h2>
+<div class="card">✔ Sem análise de perfil</div>
+<div class="card">✔ Assistência 24h</div>
+<div class="card">✔ Roubo e furto</div>
 </div>
 
-<!-- PROVA SOCIAL SIMPLES -->
-<div class="section">
-<p><span class="highlight">Atendimento confiável</span> • Clientes protegidos diariamente</p>
-</div>
-
-<div class="footer">
-Auto Vale Proteções • Seu veículo protegido com quem entende
+<div class="section fade-in">
+<h2>Oferta termina em:</h2>
+<p id="timer"></p>
 </div>
 
 </div>
+
+<a class="whatsapp" href="https://wa.me/557597142719">💬</a>
+
+<script>
+// ANIMAÇÃO AO ROLAR
+const elements = document.querySelectorAll('.fade-in');
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const pos = el.getBoundingClientRect().top;
+    if (pos < window.innerHeight - 50) {
+      el.classList.add('show');
+    }
+  });
+});
+
+// CONTADOR
+let count = 0;
+let target = 127;
+let interval = setInterval(() => {
+  count++;
+  document.getElementById("counter").innerText = count;
+  if (count >= target) clearInterval(interval);
+}, 20);
+
+// TIMER (URGÊNCIA)
+let time = 600;
+setInterval(() => {
+  let min = Math.floor(time / 60);
+  let sec = time % 60;
+  document.getElementById("timer").innerText =
+    min + "m " + sec + "s";
+  time--;
+}, 1000);
+</script>
 
 </body>
 </html>
