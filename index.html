@@ -30,6 +30,7 @@ body {
 /* TEXTO */
 h1 {
   font-size: 26px;
+  margin-top: 15px;
 }
 
 p {
@@ -70,10 +71,31 @@ p {
   margin-bottom: 15px;
 }
 
+.plan.vip {
+  border: 2px solid #22c55e;
+  box-shadow: 0 0 15px rgba(34,197,94,0.4);
+}
+
+.badge {
+  background: #22c55e;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 .price {
   font-size: 20px;
   color: #22c55e;
   margin-top: 10px;
+}
+
+/* CONFIANÇA */
+.trust {
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.9;
 }
 
 /* TIMER */
@@ -106,16 +128,19 @@ p {
   <img src="sua-foto.jpg">
 </div>
 
-<h1>Proteção veicular com <span class="highlight">economia e segurança</span> 🚗</h1>
+<h1>Proteja seu carro ou moto <span class="highlight">pagando menos e sem burocracia</span> 🚗</h1>
 
-<p>Sou <span class="highlight">consultor credenciado da Auto Vale Prevenções</span> e vou te ajudar a proteger seu veículo com o melhor custo-benefício.</p>
+<p>
+Sou <span class="highlight">consultor credenciado Auto Vale Prevenções</span><br>
+Atendimento direto comigo, sem enrolação e com resposta rápida.
+</p>
 
-<a class="btn" href="https://wa.me/557597142719?text=Quero%20fazer%20uma%20simulação">
-Fazer simulação agora
+<a class="btn" href="https://wa.me/557597142719?text=Quero%20fazer%20uma%20simulação%20gratuita">
+👉 Fazer simulação grátis no WhatsApp
 </a>
 
 <div class="timer">
-⏳ Oferta com 10% de desconto na adesão termina em: <span id="timer"></span>
+⏳ 10% de desconto na adesão termina em: <span id="timer"></span>
 </div>
 
 <!-- PLANOS -->
@@ -123,26 +148,34 @@ Fazer simulação agora
 
 <div class="plan">
 <h2>Básico</h2>
-<p>Roubo, furto, perda total, colisão e assistência 24h</p>
+<p>Ideal pra quem quer economizar e ter proteção essencial</p>
 <div class="price">Carro a partir de R$ 94,90 | Moto R$ 50,90</div>
 </div>
 
-<div class="plan">
+<div class="plan vip">
+<div class="badge">MAIS ESCOLHIDO</div>
 <h2>VIP</h2>
-<p>Mais benefícios + cobertura ampliada + guincho maior</p>
+<p>Melhor custo-benefício com mais benefícios e cobertura</p>
 <div class="price">Carro a partir de R$ 114,90 | Moto R$ 58,90</div>
 </div>
 
 <div class="plan">
 <h2>TOP</h2>
-<p>Proteção completa + terceiros + veículo reserva</p>
+<p>Proteção completa pra quem quer rodar tranquilo</p>
 <div class="price">Carro a partir de R$ 160,90 | Moto R$ 69,90</div>
 </div>
 
 </div>
 
+<!-- CONFIANÇA -->
+<div class="trust">
+✔ Atendimento direto comigo <br>
+✔ Sem burocracia <br>
+✔ Resposta rápida no WhatsApp
+</div>
+
 <a class="btn" href="https://wa.me/557597142719?text=Quero%20minha%20cotação">
-Quero minha cotação
+Quero minha cotação agora
 </a>
 
 </div>
