@@ -13,91 +13,77 @@ body {
   color: #fff;
 }
 
-/* ANIMAÇÃO */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.8s;
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  align-items: center;
-}
-
-.logo {
-  height: 45px;
-}
-
-.profile img {
-  width: 45px;
-  border-radius: 50%;
-  border: 2px solid #22c55e;
-}
-
-/* HERO */
+/* CONTAINER */
 .container {
   text-align: center;
   padding: 20px;
 }
 
+/* FOTO */
 .hero-img img {
-  width: 140px;
+  width: 130px;
   border-radius: 50%;
-  box-shadow: 0 0 30px #22c55e;
+  border: 3px solid #22c55e;
+  box-shadow: 0 0 20px #22c55e;
 }
 
+/* TEXTO */
 h1 {
-  font-size: 28px;
+  font-size: 26px;
+}
+
+p {
+  font-size: 16px;
 }
 
 .highlight {
   color: #22c55e;
+  font-weight: bold;
 }
 
 /* BOTÃO */
 .btn {
+  display: inline-block;
   background: linear-gradient(45deg, #22c55e, #16a34a);
   padding: 16px 28px;
   border-radius: 12px;
   color: white;
   text-decoration: none;
-  display: inline-block;
   margin-top: 20px;
+  font-size: 18px;
   transition: 0.3s;
 }
 
 .btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
-/* CARDS */
-.section {
+/* PLANOS */
+.plans {
   margin-top: 40px;
 }
 
-.card {
+.plan {
   background: rgba(255,255,255,0.05);
-  padding: 15px;
-  margin: 10px;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
-/* CONTADOR */
-.counter {
-  font-size: 30px;
+.price {
+  font-size: 20px;
+  color: #22c55e;
+  margin-top: 10px;
+}
+
+/* TIMER */
+.timer {
+  font-size: 18px;
+  margin-top: 15px;
   color: #22c55e;
 }
 
-/* WHATSAPP FIXO */
+/* WHATS */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -105,8 +91,8 @@ h1 {
   background: #22c55e;
   padding: 15px;
   border-radius: 50%;
-  font-size: 22px;
   color: white;
+  font-size: 22px;
   text-decoration: none;
 }
 </style>
@@ -114,70 +100,57 @@ h1 {
 
 <body>
 
-<div class="header">
-  <img src="logo.jpg" class="logo">
-  <div class="profile">
-    <img src="sua-foto.jpg">
-  </div>
-</div>
-
 <div class="container">
 
-<div class="hero-img fade-in">
+<div class="hero-img">
   <img src="sua-foto.jpg">
 </div>
 
-<h1 class="fade-in">Proteja seu veículo com <span class="highlight">segurança e economia</span> 🚗</h1>
+<h1>Proteção veicular com <span class="highlight">economia e segurança</span> 🚗</h1>
 
-<p class="fade-in">Sem burocracia e com assistência 24h</p>
+<p>Sou <span class="highlight">consultor credenciado da Auto Vale Prevenções</span> e vou te ajudar a proteger seu veículo com o melhor custo-benefício.</p>
 
-<a class="btn fade-in" href="https://wa.me/557597142719?text=Quero%20simular">
-Simular agora
+<a class="btn" href="https://wa.me/557597142719?text=Quero%20fazer%20uma%20simulação">
+Fazer simulação agora
 </a>
 
-<div class="section fade-in">
-<h2>Clientes protegidos</h2>
-<div class="counter" id="counter">0</div>
+<div class="timer">
+⏳ Oferta com 10% de desconto na adesão termina em: <span id="timer"></span>
 </div>
 
-<div class="section fade-in">
-<h2>Vantagens</h2>
-<div class="card">✔ Sem análise de perfil</div>
-<div class="card">✔ Assistência 24h</div>
-<div class="card">✔ Roubo e furto</div>
+<!-- PLANOS -->
+<div class="plans">
+
+<div class="plan">
+<h2>Básico</h2>
+<p>Roubo, furto, perda total, colisão e assistência 24h</p>
+<div class="price">Carro a partir de R$ 94,90 | Moto R$ 50,90</div>
 </div>
 
-<div class="section fade-in">
-<h2>Oferta termina em:</h2>
-<p id="timer"></p>
+<div class="plan">
+<h2>VIP</h2>
+<p>Mais benefícios + cobertura ampliada + guincho maior</p>
+<div class="price">Carro a partir de R$ 114,90 | Moto R$ 58,90</div>
 </div>
+
+<div class="plan">
+<h2>TOP</h2>
+<p>Proteção completa + terceiros + veículo reserva</p>
+<div class="price">Carro a partir de R$ 160,90 | Moto R$ 69,90</div>
+</div>
+
+</div>
+
+<a class="btn" href="https://wa.me/557597142719?text=Quero%20minha%20cotação">
+Quero minha cotação
+</a>
 
 </div>
 
 <a class="whatsapp" href="https://wa.me/557597142719">💬</a>
 
 <script>
-// ANIMAÇÃO AO ROLAR
-const elements = document.querySelectorAll('.fade-in');
-window.addEventListener('scroll', () => {
-  elements.forEach(el => {
-    const pos = el.getBoundingClientRect().top;
-    if (pos < window.innerHeight - 50) {
-      el.classList.add('show');
-    }
-  });
-});
-
-// CONTADOR
-let count = 0;
-let target = 127;
-let interval = setInterval(() => {
-  count++;
-  document.getElementById("counter").innerText = count;
-  if (count >= target) clearInterval(interval);
-}, 20);
-
-// TIMER (URGÊNCIA)
+// TIMER 10 MIN
 let time = 600;
 setInterval(() => {
   let min = Math.floor(time / 60);
