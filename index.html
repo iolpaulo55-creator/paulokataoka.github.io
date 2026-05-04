@@ -17,61 +17,29 @@ body {
 
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-}
-
-/* NAV */
-.nav {
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.badge-consultor {
-  font-size: 12px;
-  background: #22c55e;
-  color: #000;
-  padding: 5px 8px;
-  border-radius: 6px;
 }
 
 /* HERO */
 .hero {
   text-align: center;
   padding: 40px 20px;
-  background: rgba(0,0,0,0.35);
-  margin: 20px;
-  border-radius: 12px;
 }
 
 .hero img {
-  width: 110px;
+  width: 100px;
   border-radius: 50%;
   border: 3px solid #22c55e;
-  box-shadow: 0 0 25px rgba(34,197,94,0.5);
 }
 
 h1 {
   font-size: 26px;
-  margin-top: 20px;
   line-height: 1.3;
 }
 
 .sub {
-  margin-top: 10px;
   color: #cbd5f5;
+  margin-top: 10px;
   font-size: 15px;
-}
-
-.highlight {
-  color: #22c55e;
-  font-weight: bold;
 }
 
 /* BOTÃO */
@@ -79,179 +47,89 @@ h1 {
   display: inline-block;
   margin-top: 20px;
   padding: 15px 26px;
-  background: linear-gradient(45deg, #22c55e, #16a34a);
+  background: #22c55e;
   color: #000;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* TIMER */
-.timer {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #22c55e;
-}
-
-/* SECTIONS */
-.section {
+/* PLANOS */
+.plans {
   padding: 20px;
 }
 
-/* CARDS */
-.card {
+.plan {
   background: rgba(17,24,39,0.9);
-  backdrop-filter: blur(6px);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
 
-.card.vip {
+.plan.vip {
   border: 2px solid #22c55e;
-  box-shadow: 0 0 15px rgba(34,197,94,0.4);
 }
 
-.badge {
-  font-size: 12px;
-  background: #22c55e;
-  color: #000;
-  padding: 4px 8px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
+/* TEXTO */
 .price {
   color: #22c55e;
-  margin-top: 10px;
-  font-weight: bold;
+  margin-top: 8px;
 }
 
-/* CONFIANÇA */
-.trust {
-  padding: 20px;
-  font-size: 14px;
-  color: #e2e8f0;
-  text-align: center;
-}
-
-/* FOOTER */
+/* RODAPÉ */
 .footer {
   text-align: center;
   padding: 20px;
   font-size: 13px;
   color: #94a3b8;
 }
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #22c55e;
-  padding: 14px;
-  border-radius: 50%;
-  color: #000;
-  font-size: 20px;
-  text-decoration: none;
-  box-shadow: 0 0 15px rgba(34,197,94,0.6);
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
 </style>
 </head>
 
 <body>
 
-<div class="nav">
-  <div class="brand">Auto Vale Prevenções</div>
-  <div class="badge-consultor">Consultor credenciado</div>
-</div>
-
 <div class="hero">
   <img src="sua-foto.jpg">
 
   <h1>
-    Evite prejuízo com roubo ou colisão<br>
-    <span class="highlight">proteja seu veículo pagando menos</span>
+    Proteja seu veículo sem burocracia<br>
+    e pagando menos
   </h1>
 
   <div class="sub">
-    Atendimento direto comigo • rápido • sem burocracia
+    Consultor credenciado Auto Vale Prevenções
   </div>
 
-  <a class="btn" href="https://wa.me/557597142719?text=Quero%20fazer%20uma%20simulação">
-    Fazer simulação grátis no WhatsApp
+  <a class="btn" href="https://wa.me/557597142719">
+    Simular no WhatsApp
   </a>
-
-  <div class="timer">
-    ⏳ 10% de desconto na adesão termina em <span id="timer"></span>
-  </div>
 </div>
 
-<div class="section">
+<div class="plans">
 
-  <div class="card">
+  <div class="plan">
     <h3>Básico</h3>
-    <p>Ideal pra quem quer economizar</p>
-    <div class="price">Carro a partir de R$ 94,90 | Moto R$ 50,90</div>
+    <p>Proteção essencial</p>
+    <div class="price">A partir de R$ 94,90</div>
   </div>
 
-  <div class="card vip">
-    <div class="badge">MAIS ESCOLHIDO</div>
-    <h3>VIP</h3>
-    <p>Melhor equilíbrio entre preço e proteção</p>
-    <div class="price">Carro a partir de R$ 114,90 | Moto R$ 58,90</div>
+  <div class="plan vip">
+    <h3>VIP (mais escolhido)</h3>
+    <p>Melhor custo-benefício</p>
+    <div class="price">A partir de R$ 114,90</div>
   </div>
 
-  <div class="card">
+  <div class="plan">
     <h3>TOP</h3>
-    <p>Proteção completa sem dor de cabeça</p>
-    <div class="price">Carro a partir de R$ 160,90 | Moto R$ 69,90</div>
+    <p>Proteção completa</p>
+    <div class="price">A partir de R$ 160,90</div>
   </div>
 
-</div>
-
-<div class="trust">
-✔ Atendimento direto comigo <br>
-✔ Sem análise de perfil <br>
-✔ Resposta rápida no WhatsApp
-</div>
-
-<div style="text-align:center;">
-  <a class="btn" href="https://wa.me/557597142719?text=Quero%20minha%20cotação">
-    Falar com consultor agora
-  </a>
 </div>
 
 <div class="footer">
-Auto Vale Prevenções • Consultor credenciado
+Auto Vale Prevenções • Atendimento direto comigo
 </div>
-
-<a class="whatsapp" href="https://wa.me/557597142719">💬</a>
-
-<script>
-let time = 600;
-setInterval(() => {
-  let min = Math.floor(time / 60);
-  let sec = time % 60;
-  document.getElementById("timer").innerText =
-    min + "m " + sec + "s";
-  time--;
-}, 1000);
-</script>
 
 </body>
 </html>
